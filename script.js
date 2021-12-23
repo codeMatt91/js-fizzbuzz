@@ -11,9 +11,16 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 let number = '';
 
 for (let i=1; i <= 10; i++) {
-   number += `${i} `;
-   console.log(number);
 
+   number += i;
+   console.log(number);
+   
+   if (number % 3 === 0) {
+      number += `Fizz` ;
+   } else if (number % 5 === 0 ) {
+      number += `Buzz`
+   }
 }
+
 
 const writeNumber = document.getElementById('write-number').innerText = number;
